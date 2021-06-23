@@ -16,8 +16,13 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.edit_text).setVisibility(View.VISIBLE)
         );
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+                View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        );
     }
 }
